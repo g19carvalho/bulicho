@@ -5,9 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bolicho Web</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 <body>
-<h1>Sejam bem vindos ao Bolicho</h1>
-<a href="cliente/listar">Clientes</a>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h1>Sejam bem vindos ao Bolicho!!</h1>
+		</div>
+		<div class="panel-body">
+			<a href="cliente/listar" class="btn btn-primary"> 
+				<span class="glyphicon glyphicon-user"></span>Clientes</a>
+		</div>
+	</div>
 </body>
 </html>

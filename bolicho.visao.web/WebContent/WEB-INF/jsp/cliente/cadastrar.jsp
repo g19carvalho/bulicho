@@ -1,38 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Clientes</title>
+<title>Cadastro de cliente</title>
+
 <link rel="stylesheet" 
 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
+
 </head>
 <body>
-<h2>Listagem de clientes</h2>
-<table>
-	<tr>
-		<th> CPF </th>
-		<th> Nome </th>
-	</tr>
-	<c:forEach items="${clientes}" var="cli">
-		<tr>
-			<td>${cli.cpf}</td>
-			<td>${cli.nome}</td>
-		</tr>
+<h2>Cadastro de cliente</h2>
+
+<form action="gravar">
+<div class="form-group">
+	<label for="txtCPF">CPF:</label>
+	<input type="text" name="cliente.cpf" id="txtCPF" class="form-control">
+</div>
 	
-	</c:forEach>
-		
-</table>
-	
-	<a class="btn btn-primary" href="cadastrar">
-		<span class="glyphicon glyphicon-plus"></span>
-		Adicionar</a>
+<div class="form-group">
+	<label for="txtNome">Nome:</label>
+	<input type="text" name="cliente.nome" id="txtNome" class="form-control">
+</div>
+
+<div class="form-group">
+	<input type="submit" class="btn btn-sucess" value="gravar">
+</div>
+</form>
 
 </body>
 </html>

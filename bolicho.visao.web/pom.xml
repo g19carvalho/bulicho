@@ -43,8 +43,8 @@
 		</dependency>
 		
 		<dependency>
-		<groupId>br.edu.iffarroupilha</groupId> 
-		<artifactId>bolicho.controle</artifactId>
+		<groupId>br.edu.iffarroupilha</groupId>
+		<artifactId>bulicho.controle</artifactId>
 		<version>1.0</version>
 		</dependency>
 		
