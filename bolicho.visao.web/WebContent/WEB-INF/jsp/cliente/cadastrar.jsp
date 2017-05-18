@@ -6,8 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastro de cliente</title>
 
-<link rel="stylesheet" 
-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 
 
 
@@ -28,7 +27,10 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" int
 
 <div class="form-group">
 	<input type="submit" class="btn btn-sucess" value="gravar">
+	
 </div>
+
+
 </form>
 
 </body>

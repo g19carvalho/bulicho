@@ -7,32 +7,68 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Clientes</title>
-<link rel="stylesheet" 
-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<title>Clientes</title>
+
+<link rel="stylesheet" href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="http://localhost:8080/bolicho.visao.web/css/jquery.dataTables.min.css">
+
+<script src="http://localhost:8080/bolicho.visao.web/js/jquery-3.2.1.min.js"></script>
+
+<script src="http://localhost:8080/bolicho.visao.web/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('table').dataTable({
+	        "language": {
+	            "lengthMenu": "Mostrando _MENU_ registros por páginas",
+	            "zeroRecords": "Nenhuma ocorrência",
+	            "info": "pág _PAGE_ de _PAGES_",
+	            "infoEmpty": "Sem registros",
+	            "infoFiltered": "(Buscando de _MAX_ registros)",
+	            "search": "Buscar",
+	            "paginate": {
+	                "next": "próximo",
+	                "previous": "anterior."
+	            },
+	        }
+	    });
+		
+	})
+</script>
 
 </head>
 <body>
-<h2>Listagem de clientes</h2>
-<table>
-	<tr>
-		<th> CPF </th>
-		<th> Nome </th>
-	</tr>
-	<c:forEach items="${clientes}" var="cli">
-		<tr>
-			<td>${cli.cpf}</td>
-			<td>${cli.nome}</td>
-		</tr>
-	
-	</c:forEach>
+	<div class="container">
+		<h2>Listagem de clientes</h2>
+		<table>
 		
-</table>
+		<thead>
+			<tr>
+				<th> CPF </th>
+				<th> Nome </th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		<c:forEach items="${clientes}" var="cli">
+		
+			<tr>
+				<td>${cli.cpf}</td>
+				<td>${cli.nome}</td>
+			</tr>
+			
+		</c:forEach>
+		
+		</tbody>
+		</table>
 	
 	<a class="btn btn-primary" href="cadastrar">
 		<span class="glyphicon glyphicon-plus"></span>
-		Adicionar</a>
+		Adicionar</a>	
+	
+	</div>
 
 </body>
 </html>
